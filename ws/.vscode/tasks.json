@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "rm -rf odoo-doc-${input:odooBranch} && git clone --depth 1 --branch ${input:odooBranch} https://github.com/odoo/documentation.git odoo-doc-${input:odooBranch} && cd odoo-doc-${input:odooBranch} && pip install -r requirements.txt && make gettext",
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}/repos"
             },
             "group": {
                 "kind": "build",
