@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Odoo Doc: Clone & Setup",
+            "type": "shell",
+            "command": "rm -rf odoo-doc-${input:odooBranch} && git clone --depth 1 --branch ${input:odooBranch} https://github.com/odoo/documentation.git odoo-doc-${input:odooBranch} && cd odoo-doc-${input:odooBranch} && pip install -r requirements.txt && make gettext",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "odooBranch",
+            "type": "promptString",
+            "description": "Enter the Odoo documentation branch name (e.g., 16.0)",
+            "default": "master"
+        }
+    ]
+}

@@ -4,7 +4,7 @@ VSCodeで、コンテナを開き、ターミナルで次のコマンドを実�
 
 ```
 cd /home/vscode/ws/repos
-git clone -b 16.0 https://github.com/odoo/documentation.git odoo-doc-16.0
+git clone --depth 1 --branch 16.0 https://github.com/odoo/documentation.git odoo-doc-16.0
 cd odoo-doc-16.0
 pip install -r requirements.txt
 ```
